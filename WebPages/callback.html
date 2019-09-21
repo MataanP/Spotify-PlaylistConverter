@@ -1,0 +1,29 @@
+<head>
+<style>
+  input {
+    background-color: #555555; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position:relative;
+    top:50%;
+    left:30%;
+  }
+</style>
+</head>
+
+<script language='javascript' type='text/javascript'>
+  function setHidden(){
+    document.getElementById('access_token').value = window.location.hash
+  }
+</script>
+<body>
+  <form action="/authenticate" method="post">
+      <input type = "hidden" id ="access_token" name = "token" value= ""/>
+      <input type="submit" onclick = "setHidden();" value="Continue"/>
+  </form>
+</body>

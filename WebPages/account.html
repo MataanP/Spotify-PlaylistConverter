@@ -1,0 +1,14 @@
+
+<link rel = "stylesheet"
+   type = "text/css"
+   href = "account.css" />
+<div>
+ <ul>
+{%for row in playlists%}
+<li>
+  <a href={{row[0]}}>{{row[1]}}</a>
+  <a href = 'http://localhost:8000/convert?playlist_ID={{row[2]}}&playlist_name={{row[1]}}' target="_blank">Get Parallel</a>
+</li>
+{%endfor%}
+ </ul>
+</div>

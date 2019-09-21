@@ -1,0 +1,29 @@
+/* this code was retrieved from https://codepen.io/elharony/pen/yOgYez */
+form {
+  margin:0 auto;
+  width:300px
+}
+input {
+  margin-bottom:3px;
+  padding:10px;
+  width: 100%;
+  border:1px solid #CCC
+}
+button {
+  padding:10px
+}
+label {
+  cursor:pointer
+}
+#form-switch {
+  display:none
+}
+#register_form {
+  display:none
+}
+#form-switch:checked~#register_form {
+  display:block
+}
+#form-switch:checked~#login-form {
+  display:none
+}

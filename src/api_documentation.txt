@@ -1,0 +1,7 @@
+If you prefer not to use our webapp, then you can use our api functionality.
+
+Create an Account:
+  HTTP POST to
+    /account
+  With a body:
+    username=username_text&email=email_text&password=password_txt

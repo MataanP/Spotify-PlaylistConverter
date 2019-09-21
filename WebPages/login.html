@@ -1,0 +1,29 @@
+<!--This code was retrieved from https://codepen.io/elharony/pen/yOgYez-->
+<script language='javascript' type='text/javascript'>
+  function check() {
+      if (document.getElementById('password').value != document.getElementById('password_confirm').value) {
+          alert('Password Must be Matching.');
+          return false;
+      } else {
+          return true;
+      }
+  }
+</script>
+<input type='checkbox' id='form-switch'>
+<link rel = "stylesheet"
+   type = "text/css"
+   href = "login.css" />
+<form id='login-form' asdfg action="/account" method='post'>
+  <input type="text" placeholder="Username" name= "username" required>
+  <input type="password" placeholder="Password" name= "password" required>
+  <button type='submit'>Login</button>
+  <label for='form-switch'><span>Register</span></label>
+</form>
+<form id='register_form' action="/account" method='post'>
+  <input type="text" placeholder="Username" name="username" required>
+  <input type="email" placeholder = "email" name="email" required>
+  <input type="password" placeholder="Password" name= "password" id = "password"required>
+  <input type="password" placeholder="Re Password" id= "password_confirm" required>
+  <button type='submit' onclick="return check();">Register</button>
+  <label for='form-switch'>Already Member? Sign In Now..</label>
+</form>
