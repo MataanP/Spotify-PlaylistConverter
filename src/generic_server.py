@@ -9,7 +9,7 @@ def playlist_app(environ, start_response):
     return [body.encode("UTF-8")]
 
 if __name__ == "__main__":
-    httpd = make_server('', 8000, playlist_app)
-    print("Serving on port 8000...")
+    httpd = make_server('', 80, playlist_app)
+    print("Serving on port 80...")
         # Serve until process is killed
     httpd.serve_forever()
