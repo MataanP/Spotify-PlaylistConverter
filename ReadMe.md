@@ -1,8 +1,8 @@
 Hello there!
 
-To use this program, CD into the PlaylistConverter directory.
-From there you can run
-  $python3 ServerCode/generic_server.py
+To use this program, CD into the PlaylistConverter directory.\n
+From there you can run\n\t
+  $python3 ServerCode/generic_server.py\n
 Now in a web browser, go to localhost:8000/login
   Make an account or sign in
 After signing in you should then be prompted to oauth into your spotify account,
