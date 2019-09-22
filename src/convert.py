@@ -54,7 +54,9 @@ class Converter():
             "Authorization": "Bearer "+token
         }
         response = requests.get(url,headers= headers)
-        return response.json()
+        reponse =  response.json()
+        print (response)
+        return response
 
     def get_uri_of_new_tracks(self,tracks,token):
         song_uris =[]
