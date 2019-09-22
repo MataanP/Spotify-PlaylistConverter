@@ -43,7 +43,7 @@ def handle_conversion(environ):
             c.header_creator(["html_content_header"]))
     query = urllib.parse.parse_qs(environ["QUERY_STRING"])
     CONFIG["converter"].convert(cookie, query)
-    return ("200 OK","",[])
+    return ("200 OK",redirect("account"),c.header_creator(["html_content_header"]))
 
 
 def handle_authentication(environ):
