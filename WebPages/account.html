@@ -7,8 +7,8 @@
 {%for row in playlists%}
 <li>
   <img src = {{row[3]}}>
-  <button href={{row[0]}}>{{row[1]}} on spotify</button>
-  <button href = '/convert?playlist_ID={{row[2]}}&playlist_name={{row[1]}}' target="_blank">Get Parallel</button>
+  <button onclick="window.location.href='{{row[0]}}'">{{row[1]}} on spotify</button>
+  <button onclick="window.location.href = '/convert?playlist_ID={{row[2]}}&playlist_name={{row[1]}}'" target="_blank">Get Parallel</button>
 </li>
 {%endfor%}
  </ul>
