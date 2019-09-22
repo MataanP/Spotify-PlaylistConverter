@@ -14,7 +14,7 @@ def handle_request(environ):
         body= server_file_return(environ ["PATH_INFO"])
         return ("200 OK",body,c.header_creator(["html_content_header"]))
     except FileNotFoundError:
-        if environ["PATH_INFO"] == "/login" or environ["PATH_INFO"] == "":
+        if environ["PATH_INFO"] == "/login" or environ["PATH_INFO"] == "/":
             return ("200 OK", redirect("login.html"),c.header_creator(["html_content_header"]))
         if environ["PATH_INFO"] == "/account":
             return handle_account(environ)
