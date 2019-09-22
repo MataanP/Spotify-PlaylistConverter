@@ -5,7 +5,11 @@ from config import CONFIG
 import common as c
 from jinja2 import Environment, PackageLoader, select_autoescape,FileSystemLoader
 
+url = "spotify.mataan.me"
+
 def handle_request(environ):
+    if environ["HTTP_HOST"] != url:
+        return ("404 File Not Found","",[])
     try:
         body= server_file_return(environ ["PATH_INFO"])
         return ("200 OK",body,c.header_creator(["html_content_header"]))
