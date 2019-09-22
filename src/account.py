@@ -45,7 +45,10 @@ class Account():
             links[counter] =item["external_urls"]["spotify"]
             ids[counter] =item["id"]
             names[counter] =item["name"]
-            pictures[counter] = item["images"][0]["url"]
+            try:
+                pictures[counter] = item["images"][0]["url"]
+            except (KeyError, IndexError):
+                pictures[counter] = ""
             counter = counter+1
         return (links,names,ids,pictures)
 
