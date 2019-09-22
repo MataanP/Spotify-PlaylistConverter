@@ -77,8 +77,8 @@ def handle_account(environ):
     if method == "GET":
         try:
             cookie = get_cookie(environ)
-            (links,names,ids) = account_manager.handle_R(cookie)
-            return ("200 OK",render_account("account.html",links,names,ids),c.header_creator(\
+            (links,names,ids,pictures) = account_manager.handle_R(cookie)
+            return ("200 OK",render_account("account.html",links,names,ids,pictures),c.header_creator(\
                     ["html_content_header"]))
         except (account.BadAccountIdentifiersError, KeyError):
             return ("200 OK",server_file_return("/badCookie.html")\
@@ -115,9 +115,9 @@ def get_cookie(environ):
     except KeyError:
         raise KeyError
 
-def render_account(filename, links,names,ids):
+def render_account(filename, links,names,ids,pictures):
     template = CONFIG["environment"].get_template(filename)
-    return template.render(playlists = zip(links,names,ids))
+    return template.render(playlists = zip(links,names,ids,pictures))
 
 def server_file_return(filename):
     #this only works if run from SeverCode directory

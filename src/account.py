@@ -28,8 +28,8 @@ class Account():
         sp = spotipy.client.Spotify(auth = spotify_handle, client_credentials_manager = self.credentials )
         try:
             results = sp.current_user_playlists(limit = 15)
-            (links,names,id) = self.handle_playlist_results(results)
-            return (links,names,id)
+            (links,names,id,images) = self.handle_playlist_results(results)
+            return (links,names,id,images)
         except spotipy.client.SpotifyException:
             raise SpotifyTokenExpired
 
@@ -45,8 +45,9 @@ class Account():
             links[counter] =item["external_urls"]["spotify"]
             ids[counter] =item["id"]
             names[counter] =item["name"]
+            pictures[counter] = item["images"][0]["url"]
             counter = counter+1
-        return (links,names,ids)
+        return (links,names,ids,pictures)
 
     def handle_CU(self,body):
         try:
