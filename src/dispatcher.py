@@ -120,7 +120,7 @@ def render_account(filename, links,names,ids,pictures):
     return template.render(playlists = zip(links,names,ids,pictures))
 
 def server_file_return(filename):
-    if filename == "" or filename = "/":
+    if filename == "" or filename == "/":
         raise FileNotFoundError
     #this only works if run from SeverCode directory
     try:
