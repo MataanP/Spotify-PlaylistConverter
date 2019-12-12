@@ -3,7 +3,10 @@ Hello there!
 To use this program, CD into the Downloaded directory.
 From there you can run
     $python3 src/generic_server.py
-Now in a web browser, direct to localhost:8000/login
+Now in a web browser, direct to 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;localhost:8000/login
+
 Make an account or sign in
 After signing in you should then be prompted to oauth into your spotify account
 
