@@ -1,14 +1,15 @@
 Hello there!
 
-To use this program, CD into the PlaylistConverter directory.
+To use this program, CD into the Downloaded directory.
 From there you can run
-  $python3 ServerCode/generic_server.py
-Now in a web browser, go to localhost:8000/login
-  Make an account or sign in
+    $python3 src/generic_server.py
+Now in a web browser, direct to localhost:8000/login
+Make an account or sign in
 After signing in you should then be prompted to oauth into your spotify account,
-  You can use my dummy if you want
-    User = ThrowyAcc@gmail.com
-    Password = jALcW3LiD6Ujw6snu3WRGQcRHCNkUL
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can use my dummy account if you want
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;User = ThrowyAcc@gmail.com
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password = jALcW3LiD6Ujw6snu3WRGQcRHCNkUL
+    
 Then you will have a chance to chose to make a parallel playlist from any of your
 current playlists
 If you do this, your account will have a playlist added to it that contains similar
